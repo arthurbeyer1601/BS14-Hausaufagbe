@@ -1,45 +1,33 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class GetterSetter {
 
+  private String dbPath;
+  private String txtInputPath;
+  private String txtName;
 
-    private static String username;
-    private static String email;
-    private static String password;
-    private static String emailInput;
+  public String getTxtName() {
+    return txtName;
+  }
 
-    public static String getEmailInput() {
-        return emailInput;
-    }
+  public void setTxtName(String txtName) {
+    this.txtName = txtName;
+  }
 
-    public static void setEmailInput(String emailInput) {
-        GetterSetter.emailInput = emailInput;
-    }
+  public String getTxtInputPath() {
+    return txtInputPath;
+  }
 
-    public static String getUsername() {
-        return username;
-    }
+  public void setTxtInputPath(String txtInputPath) {
+    this.txtInputPath = txtInputPath;
+  }
 
-    public static void setUsername(String username) {
-        GetterSetter.username = username;
-    }
+  public String getDbPath() {
+    return dbPath;
+  }
 
-    public static String getPassword() {
-        return password;
-    }
-
-    public static void setPassword(String password) {
-        GetterSetter.password = password;
-    }
-
-    public static String getEmail() {
-        return email;
-    }
-
-    public static void setEmail(String email) {
-        GetterSetter.email = email;
-    }
-
-
-
-
-
+  public void setDbPath(String dbPath) {
+    this.dbPath = dbPath;
+  }
 }

@@ -1,0 +1,23 @@
+
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(‚á€Îşÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÌãÏşÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(šíâ³ùÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¿¼õÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¹š®øÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¯€ˆ‹üÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Š¤¸Áøÿÿÿÿ
+^
+java:S5361!"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ùäù¤
+M	java:S1062"9Replace this use of System.out or System.err by a logger.(»ÿä;
+N	java:S1064"9Replace this use of System.out or System.err by a logger.(Î¦Şà
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(«İïúÿÿÿÿ
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(Â’ãñûÿÿÿÿ
+U	java:S106C"9Replace this use of System.out or System.err by a logger.(Àûå 8Ø–”¥ë/
+U	java:S106G"9Replace this use of System.out or System.err by a logger.(šùğÉ8¡¬š¥ë/
+I
+java:S2440J".Remove this instantiation of "createDatabase".(ÔÜ¿úÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+c
+java:S2095<"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(õ†ÌŒşÿÿÿÿ

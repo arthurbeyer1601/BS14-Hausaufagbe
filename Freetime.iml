@@ -7,14 +7,14 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Datenbank/sqlite-jdbc-3.8.6.jar!/" />
+          <root url="jar://$USER_HOME$/BS14-Aufgaben/JavaDatabase/sqlite-jdbc-3.8.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../Datenbank/sqlite-jdbc-3.8.6.jar!/" />
+          <root url="jar://$USER_HOME$/BS14-Aufgaben/JavaDatabase/sqlite-jdbc-3.8.6.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>

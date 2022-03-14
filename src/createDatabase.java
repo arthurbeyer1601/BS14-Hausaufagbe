@@ -1,50 +1,45 @@
 import java.sql.*;
 
-public class createDatabase{
+public class createDatabase {
 
-    public static final String DB_NAME = "AccountManager.db";
-    public static final String CONNECTION_STRING = "jdbc:sqlite:C:\\Users\\NIKUFS\\IdeaProjects\\Freetime\\src\\" + DB_NAME;
-    public static final String TABLE_NAME = "Daten";
-    public static final String COLUMN_USERNAME = "Username";
-    public static final String COLUMN_PASSWORD = "Password";
-    public static final String COLUMN_EMAIL = "Email";
-    public static final String COLUMN_ID = "user_ID";
 
-    public static final String url = CONNECTION_STRING;
+  static GetterSetter get = new GetterSetter();
+  public static final String DB_NAME = "Database.db";
+  public static final String CONNECTION_STRING = "jdbc:sqlite:" + get.getDbPath() + "Database.db";
+  public static final String TABLE_NAME = "Daten";
+  public static final String COLUMN_EMAIL = "Email";
+  public static final String url = CONNECTION_STRING;
+  public static final String COLUMN_ID = "user_ID";
+  public static Connection connection;
+  public static Statement statement;
 
-    public static Connection connection;
+  static {
+    try {
+      connection = DriverManager.getConnection(url);
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+  }
 
-    static {
-        try {
-            connection = DriverManager.getConnection(url);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
+  static {
+    try {
+      statement = connection.createStatement();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+  }
+
+
+  public createDatabase() throws SQLException, ClassNotFoundException {
+    try {
+      statement.execute(
+          "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + "( " + COLUMN_ID + " INTEGER PRIMARY KEY, "
+              + COLUMN_EMAIL + " TEXT)");
+
+    } catch (Exception e) {
+      System.out.println(e);
     }
 
-    public static Statement statement;
-
-    static {
-        try {
-            statement = connection.createStatement();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    public createDatabase() throws SQLException {
-
-
-
-
-
-        try{
-            statement.execute("CREATE TABLE IF NOT EXISTS " + TABLE_NAME + "( " + COLUMN_ID + " INTEGER PRIMARY KEY, " + COLUMN_USERNAME + " TEXT , " + COLUMN_PASSWORD + " TEXT, " + COLUMN_EMAIL + " TEXT)");
-
-        } catch(Exception e) {
-            System.out.println(e);
-        }
-
-    }
+  }
 }
