@@ -18,6 +18,8 @@ public class Main {
 
   public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
 
+    CreateDatabase.createDatabase();
+
     getter.setDbPath(System.getProperty("user.dir"));
     if (args[0].equalsIgnoreCase("-help") || args[0].equalsIgnoreCase("--help")) {
       System.out.println("-currentPath        current Databank-Path");
@@ -36,11 +38,11 @@ public class Main {
       }
 
       for (int i = 0; i < temp.toArray().length; i++) {
-        crud.createContact(createDatabase.statement, null, temp.get(i));
+        crud.createContact(CreateDatabase.statement, null, temp.get(i));
       }
     } else if (args[0].equalsIgnoreCase("-exportMails")) {
       getter.setTxtName(args[1]);
-      crud.readContact(createDatabase.statement);
+      crud.readContact(CreateDatabase.statement);
 
       try {
         File myObj = new File(getter.getTxtName());
@@ -69,7 +71,7 @@ public class Main {
       System.out.println("No known Command");
     }
 
-    new createDatabase();
+
   }
 
 }

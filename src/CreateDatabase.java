@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class createDatabase {
+public class CreateDatabase {
 
 
   static GetterSetter get = new GetterSetter();
@@ -29,17 +29,17 @@ public class createDatabase {
       e.printStackTrace();
     }
   }
-
-
-  public createDatabase() throws SQLException, ClassNotFoundException {
+  public static void createDatabase() {
     try {
       statement.execute(
           "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + "( " + COLUMN_ID + " INTEGER PRIMARY KEY, "
               + COLUMN_EMAIL + " TEXT)");
 
-    } catch (Exception e) {
-      System.out.println(e);
-    }
+    } catch (Exception ignored) {
 
+    }
   }
+
+
+
 }
